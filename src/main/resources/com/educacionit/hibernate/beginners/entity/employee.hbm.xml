@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.educacionit.hibernate.beginners.entity.EmployeeXML" table="employee">
+        <id name="id" type="int">
+            <column name="emp_id" />
+            <generator class="increment" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="emp_name" />
+        </property>
+        <property name="role" type="java.lang.String">
+            <column name="emp_role" />
+        </property>
+        <property name="insertTime" type="timestamp">
+            <column name="sys_creation" />
+        </property>
+    </class>
+
+    <query name="findCount">
+        <![CDATA[select count(e.name) from EmployeeXML e]]>
+    </query>
+
+    <sql-query name="findCountNative">
+        <return alias="employee" class="com.educacionit.hibernate.beginners.entity.EmployeeXML" />
+        <![CDATA[select e.* from employee e]]>
+    </sql-query>
+
+</hibernate-mapping>
