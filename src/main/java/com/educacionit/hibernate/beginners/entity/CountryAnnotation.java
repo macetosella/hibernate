@@ -19,7 +19,7 @@ import javax.persistence.*;
         resultClass = CountryAnnotation.class
     )
 })
-@Entity (name =  "Country")
+@Entity (name =  "Country") // si no pongo este nombre toma el de a clase ej: CountryAnnotation
 @Table (name = "country")
 public class CountryAnnotation {
 

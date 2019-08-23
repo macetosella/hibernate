@@ -55,10 +55,13 @@ public class HQLHibernateTest {
             session = sessionFactory.openSession ();
 
             logger.info (String.format ("Finding All countries..."));
-            Query query = session.createQuery("from Country");
+            Query query = session.createQuery("from Country"); // Country es el nombre de la entity
             List<CountryAnnotation> list = query.list ();
 
             Assertions.assertFalse (list.isEmpty (), "There are not countries!");
+            list.forEach((e) -> {
+                logger.info (e.getName());
+            });
 
         } catch (Exception ex) {
 

@@ -7,13 +7,13 @@
 
 	<session-factory>
 
-		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/educacionit</property>
-		<property name="hibernate.connection.username">postgres</property>
-		<property name="hibernate.connection.password">dcd16cP_</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/corecs</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">!Agostina1</property>
 		<property name="show_sql">false</property>
 		<property name="format_sql">false</property>
-		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 
 		<mapping resource="com/educacionit/hibernate/beginners/entity/employee.hbm.xml" />
 
